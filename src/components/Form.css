@@ -1,0 +1,16 @@
+
+.card{
+   justify-content: center;
+   width: 400px;
+  
+}
+.card-title{
+    text-align: center;
+}
+.form-group.form-label{
+    text-align: start;
+}
+.submitbutton{
+    margin-top: 20px;
+    text-align: center;
+}
