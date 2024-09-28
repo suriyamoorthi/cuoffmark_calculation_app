@@ -56,15 +56,15 @@ function CutoffMarkForm() {
     return errors;
   };
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values,{resetForm}) => {
     const { error } = userSchema.validate(values);
+  
     if (!error) {
       try {
         console.log("dsdg");
         const response = await PostUser(values);
-      console.log(response, "response123");
-      console.log(response.data.message, "message");
       alert(response.data.message)
+      resetForm({ value: "" });
       } catch (error) {
         alert(error.message)
       }
